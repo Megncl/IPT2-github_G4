@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Rock+Salt&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing:  border-box;
+text-decoration: none;
+}
+body { /*whole page*/
+    background-image: url(images/paper.jfif);
+}
+/* NAVBAR */
+.navbar { /*style for navbar*/
+    position: fixed; /*to maintain the navbar in the window even when scrolling*/
+    width: 100%;
+    padding: 10px 0;
+    background-color: #222222;
+    font-family: 'ubuntu', sans-serif;
+    z-index: 999; /*to maintain overlap of the navbar*/
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 50px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*NAVBAR GWYARTSY TEXT*/
+.navbar .logo a {
+    color: white;
+    font-size:35px;
+    font-weight: 600;
+    font-family: 'Allison', sans-serif;
+}
+.navbar .logo a span {
+    color: #c08189;
+} 
+/* menu list*/
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* menu list with text a*/
+.navbar .menu li a {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 25px;
+    transition: color 0.3 ease;
+    font-weight: bolder;
+}
+
+.navbar .menu li a:hover {
+    color:#c08189;
+}
+/*paint brush icon button*/
+.mbutton{
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+/* FRONT BANNER */
+
+/* div background*/
+.home {
+    display: flex;
+    background-image: url(images/b14.webp);
+    background-size: cover;
+    height: 100vh;   /*view height*/
+    font-family: 'ubuntu', sans-serif;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: height 2s;
+    color: #fff;
+    overflow: hidden;
+}
+
+.home:hover {
+    height: 110vh;
+}
+
+/* div background text*/
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content .text-1 {
+    font-size: 15px;
+}
+.home .home-content .text-2 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-left: -3px;
+    font-family: 'Rock Salt', sans-serif;
+    color: #c08189;
+}
+.home .home-content .text-3 {
+    font-size: 25px;
+    margin: 5px 0;
+}
+.home .home-content .text-3 span{
+    color: #595e5e;
+    font-weight: 500;
+}
+
+.text-4 {
+    display: inline-table;
+    margin-left: 10px;
+    list-style-type: none;
+}
+
+.text-4 li span{
+    position: relative;
+}
+/*text animation typing*/
+.text-4 li span::after {
+    content: "";
+    position:absolute;
+    left: 5px;
+    height: 100%;
+    width: 100%;
+    background: #f9c5bb;
+    border-left: 1px solid #c08189;
+    animation: typing 1.9s steps(18) infinite;
+}
+
+@keyframes typing {
+    100%{
+        left: 100%;
+        margin: 0 -100px 0 15px;
+    }
+}
+
+
+/*about me part*/
+section {
+    padding: 25px 0;
+}
+.aboutme {
+    font-family: 'Poppins' , sans-serif;
+}
+.aboutme .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 15px;
+    font-family: 'Ubuntu' , sans-serif;
+}
+.aboutme .title::before {
+    content: "WHO AM I?";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    font-size: 20px;
+    color: #6F7576;
+    width: 180px; 
+    height: 3px;
+    padding: 10px;
+    background: #e8cabf;
+    transform: translateX(-50%);
+}
+.aboutme .aboutme-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutme .aboutme-content .left{
+    width: 45%;
+}
+.aboutme .aboutme-content .left img{
+height: 300px;
+width: 300px;
+object-fit: cover;
+border-radius: 6px;
+}
+.aboutme .aboutme-content .right{
+    width: 45%;
+}
+.aboutme .aboutme-content .right .text{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.aboutme .aboutme-content .right .text span {
+    color: #c08189;
+}
+.aboutme .aboutme-content .right p{
+    text-align: justify;
+}
