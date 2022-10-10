@@ -196,3 +196,340 @@ border-radius: 6px;
 .aboutme .aboutme-content .right p{
     text-align: justify;
 }
+/*ART GALLERY TEXT*/
+.heading {
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+}
+.heading h3 {
+    font-size: 3em;
+    font-family: 'rock salt', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: salmon;
+}
+.heading h3 span{
+    font-family: 'rock salt', sans-serif;
+    font-style: italic;
+    font-weight: lighter; 
+    text-align: center;
+
+}
+/*Gallery part*/
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 40px 20px 0 20px;
+}
+
+.container  .box {
+    display: flex;
+    flex-direction:  row;
+    justify-content:  space-between;
+    align-items: center;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+.container  .box .dream {
+    display: flex;
+    flex-direction: column;
+    width: 32.2%;
+}
+.container  .box .dream img {
+    width: 100%;
+    padding-bottom: 10px;
+    border-radius: 15px;
+}
+.dream img:hover {
+    z-index: 1;
+    transform: scale(1.25);
+    box-shadow: 0 25px 40px rgba(0, 0, 0, .5) ;
+    }
+
+/*EMBEDDED VIDEOS*/
+.vidcon {
+    width:100%;
+    margin: 30px 0;
+}
+.vidbox1, .vidbox2, .vidbox3 {
+    position: relative;
+    text-align: center;
+    margin-bottom: 100px;
+    padding-bottom: 150PX;
+    font-family: 'rock salt' , sans-serif;
+}
+.vidbox1::before, .vidbox2:before, .vidbox3:before {
+    position: relative;
+    bottom: -10px;
+    text-align: center;
+    font-size: 20px;
+    color: #222222;
+    width: 200px; 
+    padding: 6px;
+    background: salmon;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+.vidbox1::before {
+    content: "ELEGANT";
+}
+.vidbox2::before {
+    content: "WHITE";
+}
+.vidbox3::before {
+    content: "NANNO";
+}
+.vidcon h1 {
+    padding: 5px 0;
+    color: salmon;
+    font-size: 40px;
+    font-family: 'rock salt', sans-serif;
+    text-align: center;
+}
+.vid {
+    margin: 10px 40px 10px 40px;
+    position: absolute;
+    object-fit:scale-down;
+    right: 5%;
+    position: center;
+    width: 80%;
+    height: 200;
+    
+}
+iframe {
+    border-radius: 15px;
+}
+
+.vidbox:hover{
+    color: #222222;
+}
+
+/*FOOTER*/
+footer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/*footer about*/
+footer .foot .footabout {
+    margin-right: 30px;
+    width: 40%;
+}
+footer .foot h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'poppins';
+}
+footer .foot h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f000;
+}
+footer p {
+    color: #999;
+    font-family: 'poppins';
+}
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.sci li a:hover{
+    background: #c08189;
+}
+.sci li a .fa:hover{
+    color: #fff;
+    font-size: 20px;
+}
+/*footer links*/
+.links {
+    position: relative;
+    width:25%
+}
+.links ul li {
+    list-style: none;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: 'poppins';
+}
+.links ul li a:hover{
+    color: #c08189;
+}
+/*footer contact*/
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info {
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span, a{
+    color: #999;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+.contact .info li span:hover, a:hover{
+    color: #c08189;
+}
+/*copyright*/
+.copyright{
+    width: 100%;
+    background: #c08189;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 10px;
+}
+/*--------------------------------------------------------------------------------------------------------------------*/
+/*responsive media*/
+/*footer*/
+@media (max-width: 991px) {
+    footer{
+        padding: 40px;
+    }
+    footer .foot {
+        flex-direction: column;
+    }
+    footer .foot .footabout, .links,  .contact{
+        margin-right: 0;
+        margin-bottom: 40px;
+        width: 100%;
+    }
+    .copyright{
+        padding: 8px 40px;
+    }   
+}
+/*whole*/
+@media (max-width: 1300px){
+    .home .max-width{
+        margin-left: 0px; /*para magpantay margin sa logo GwyArtsy pag niliit window*/
+    }
+}
+@media (max-width: 1104px){
+    .aboutme .aboutme-content .left img {
+        height: 400px;
+        width: 400px;
+    }
+}
+/*navbar*/
+@media (max-width: 947px){
+    .navbar .menu {
+        position: fixed;
+        background: #222222;
+        height: 100vh;
+        width: 100%;
+        left: -100%; top: 0;
+        text-align: center;
+        padding: 80px;
+        transition: all 0.4s ease-in-out;
+    }
+    .navbar .menu li {
+        display: block;
+    }
+    .navbar .menu li a {
+        display: inline-block;
+        margin: 15px 0;
+        font-size: 10px;
+    }
+    .mbutton{
+        display: block;
+        z-index: 999;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .mbutton i.active::before{
+        content: "\f00d" ;
+    }
+    /*about me*/
+    .home .home-content .text-2{
+        font-size:50px;
+    }
+    .home .home-content .text-3{
+        font-size:15px;
+    }
+    .aboutme .aboutme-content .column{
+        width: 100%;
+    }
+    .max-width {
+        max-width: 800px;
+    }
+    .aboutme .aboutme-content .left{
+        display: flex;
+        justify-content: center;
+        margin: 0 auto 60px;
+    }
+    .aboutme .aboutme-content .right{
+        flex: 100%;
+    }
+    /*image banner*/
+}
+/*banner*/
+@media (max-width: 900px){
+    .max-width {
+        padding: 0 50px;
+    }
+}
+@media (max-width: 700px){
+    .max-width {
+        padding: 0 25px;
+    }
+}
+/*art gallery*/
+@media only screen and (max-width: 770px){
+    .container  .box {
+        flex-direction:  column; /*to change the photos from row to column when resizing*/
+    }
+    .container  .box .dream{
+        width: 100%; /*to cover the full size when resizing*/
+    }
+}
