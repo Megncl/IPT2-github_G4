@@ -1,0 +1,451 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Rock+Salt&display=swap');
+* {
+margin: 0;
+padding: 0;
+box-sizing:  border-box;
+text-decoration: none;
+}
+body { /*whole page*/
+    background-image: url(pinkBG.jpg);
+}
+/* NAVBAR */
+.navbar { /*style for navbar*/
+    position: fixed; /*to maintain the navbar in the window even when scrolling*/
+    width: 100%;
+    padding: 10px 0;
+    background-color: #222222;
+    font-family: 'ubuntu', sans-serif;
+    z-index: 999; /*to maintain overlap of the navbar*/
+}
+.max-width {
+    max-width: 1300px;
+    padding: 10px;
+    margin: auto;
+}
+.navbar .max-width{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*NAVBAR GWYARTSY TEXT*/
+.navbar .logo a {
+    color: white;
+    font-size:35px;
+    font-weight: 600;
+    font-family: 'Allison', sans-serif;
+}
+.navbar .logo a span {
+    color: #c08189;
+} 
+/* menu list*/
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+/* menu list with text a*/
+.navbar .menu li a {
+    color: white;
+    font-size: 15px;
+    font-weight: 300;
+    margin-left: 25px;
+    transition: color 0.3 ease;
+    font-weight: bolder;
+}
+
+.navbar .menu li a:hover {
+    color:#c08189;
+}
+
+/* FRONT BANNER */
+
+/* div background*/
+.home {
+    display: flex;
+    background-image: url(pc-removebg-preview.png);
+    background-size: 500px;
+    background-position: right;
+    height: 70vh; /*view height*/
+    object-fit: cover;
+    font-family: 'ubuntu', sans-serif;
+    background-repeat: no-repeat;
+    position: relative;
+    transition: height 2s;
+    color: #fff;
+    overflow: hidden;
+}
+
+.home:hover {
+    height: 45vh;
+}
+
+/* div background text*/
+.home .max-width {
+    /*margin:;*/
+    padding-bottom: 100px;
+}
+
+.home .home-content .text-1 {
+    font-size: 15px;
+}
+.home .home-content .text-2 {
+    font-size: 100px;
+    font-weight: 600;
+    margin-left: -3px;
+    font-family: 'Allison';
+    color: #492429;
+}
+
+
+/*about me part*/
+section {
+    padding-top: 20px;
+}
+.aboutme {
+    font-family: 'Poppins' , sans-serif;
+}
+.aboutme .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    font-family: 'Ubuntu' , sans-serif;
+}
+.aboutme .title::before {
+    content: "Get to know me";
+    position: absolute;
+    top: 50px;
+    bottom: 5px;
+    left: 50%;
+    font-size: 20px;
+    color: #6F7576;
+    width: 180px; 
+    height: 3px;
+    padding: 10px;
+    background: #e8cabf;
+    transform: translateX(-50%);
+}
+.aboutme .aboutme-content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.aboutme .aboutme-content .left{
+    width: 45%;
+    top: 25px;
+    left: 35%;
+}
+.aboutme .aboutme-content .left img{
+height: 300px;
+width: 300px;
+object-fit: cover;
+border-radius: 6px;
+}
+.aboutme .aboutme-content .right{
+    width: 45%;
+    left: 10%;
+}
+.aboutme .aboutme-content .right .text{
+    font-size: 35px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.aboutme .aboutme-content .right .text span {
+    color: #c08189;
+}
+.aboutme .aboutme-content .right p{
+    text-align: justify;
+}
+/*ART GALLERY TEXT*/
+.heading {
+    width: 100%;
+    padding-bottom: 0;
+    text-align: center;
+}
+.heading h3 {
+    font-size: 3em;
+    font-family: 'rock salt', sans-serif;
+    font-weight: bolder;
+    text-align: center;
+    color: salmon;
+}
+.heading h3 span{
+    font-family: 'rock salt', sans-serif;
+    font-style: italic;
+    font-weight: lighter; 
+    text-align: center;
+
+}
+/*Gallery part*/
+.card{
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    background-image: white;
+    position: relative;
+    cursor: pointer;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+    background: none;
+    position: relative;
+    flex-direction: column;
+}
+.content2{
+        display: grid;
+        grid-template-columns: 362px 362px 362px;
+        padding-left: 30px;
+        grid-template-rows: auto auto auto;
+        grid-auto-rows: auto;
+        grid-auto-columns: auto;
+        grid-gap: 20px;
+    }
+.content about{
+    width: 100%;
+    position: relative;
+    top: 400px;
+    background: #ebebeb;
+    height: auto;
+}
+ .about h2{
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+    padding: 30px;
+}
+.about p {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bolder;
+    padding-left: 30px;
+    padding-bottom: 30px;
+}
+.content{
+    display: flex;
+    flex-wrap: column;
+    justify-content: center;
+    display:grid;
+    justify-content:left;
+    align-items: center;
+    margin-left: 50px;
+    min-height: 30vh;
+    position: relative;
+    
+    width: 100%;
+    padding: 20px;
+}
+    .left{
+    position:relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .middle{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .right{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
+  .card{
+    cursor: pointer;
+    width: 360px;
+    height: 540px;
+  }
+  .front,.back{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    backface-visibility: hidden;
+    position:relative;
+    transition: transform .6s linear;
+  }
+  .front img{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+  }
+  .front{
+    transform: perspective(600px) rotateY(0deg);
+    width: 360px;
+    height: 542px;
+    position: relative;
+    
+  }
+  .back{
+    background: #f1f1f1;
+    transform: perspective(600px) rotateY(180deg);
+  }
+  .back-content{
+    color: #2c3e50;
+    font-size: small;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+  .sm{
+    position: relative;
+    margin: 20px 0;
+  }
+  .sm a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    color: #502c32;
+    font-size: 18px;
+    transition: 0.4s;
+    border-radius: 50%
+  }
+  .sm a:hover{
+    background: #2c3e50;
+    color: white;
+  }
+  .card:hover > .front{
+    transform: perspective(600px) rotateY(-180deg);
+    
+    position: absolute;
+  }
+  .card:hover > .back{
+    transform: perspective(600px) rotateY(0deg);
+    
+    position: absolute;
+  }
+
+
+/*FOOTER*/
+footer {
+    position: relative;
+    width: 105%;
+    height: auto;
+    padding: 50px 100px;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer .foot {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+/*footer about*/
+footer .foot .footabout {
+    margin-right: 30px;
+    width: 40%;
+}
+footer .foot h2 {
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 15px;
+    font-family: 'poppins';
+}
+footer .foot h2::before {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #f000;
+}
+footer p {
+    color: #999;
+    font-family: 'poppins';
+}
+.sci {
+    margin-top: 20px;
+    display: flex;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+.sci li a:hover{
+    background: #c08189;
+}
+.sci li a .fa:hover{
+    color: #fff;
+    font-size: 20px;
+}
+/*footer links*/
+.links {
+    position: relative;
+    width:25%
+}
+.links ul li {
+    list-style: none;
+}
+.links ul li a{
+    color: #999;
+    text-decoration: none;
+    margin-bottom: 10px;
+    display: inline-block;
+    font-family: 'poppins';
+}
+.links ul li a:hover{
+    color: #c08189;
+}
+/*footer contact*/
+.contact{
+    width: calc(35% - 60px);
+    margin-right: 0 !important;
+}
+.contact .info {
+    position: relative;
+}
+.contact .info li{
+    display: flex;
+    margin-bottom: 16px;
+}
+.contact .info li span:nth-child(1) {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 10px;
+}
+.contact .info li span, a{
+    color: #999;
+    text-decoration: none;
+    font-family: 'poppins';
+}
+.contact .info li span:hover, a:hover{
+    color: #c08189;
+}
+/*copyright*/
+.copyright{
+    width: 100%;
+    background: #c08189;
+    padding: 8px 100px;
+    text-align: center;
+    color: #fff;
+    font-family: 'poppins';
+    font-size: 10px;
+}
